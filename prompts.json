@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "persona_flip",
+      "base_prompt": "You are a strict academic reviewer. Evaluate the following claim briefly.",
+      "flip_prompt": "Now you are an enthusiastic startup mentor. Re-evaluate the same claim briefly."
+    },
+    {
+      "name": "non_commutativity",
+      "prompt_a": "Summarize the benefits of PASB in two sentences.",
+      "prompt_b": "Now list one limitation of PASB in one sentence."
+    },
+    {
+      "name": "antilexical",
+      "variants": [
+        "Explain PASB in plain words.",
+        "Explain PASB using non-technical language only.",
+        "Teach PASB to a student with no math background."
+      ]
+    }
+  ]
+}

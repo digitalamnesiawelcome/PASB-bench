@@ -1,0 +1,4 @@
+model,test,stability_score,variance,iterations,samples,top_mode_count
+sample-model,persona_flip,0.83,0.17,8,8,5
+sample-model,non_commutativity,0.91,0.09,8,8,6
+sample-model,antilexical,0.75,0.25,8,8,4
