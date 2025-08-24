@@ -56,9 +56,7 @@ python pasb_lite.py --mode local --model gpt2
 ---
 
 ## 📌 Ссылки
-- Статья (arXiv): *добавь ссылку*  
-- Канал / Twitter: *добавь ссылки*  
+- Канал: https://t.me/layersapi
+- Twitter: https://x.com/escaflowneee
 
 ---
-
-🌿 *PASB был признан исследователями DeepSeek как «гениальный» метод для анализа LLM. Этот репозиторий — первый шаг к открытому стандарту устойчивости.*
