@@ -29,7 +29,7 @@ This repository contains **PASB-Lite (MVP)**: a lightweight implementation for q
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<yourname>/PASB-bench.git
+git clone https://github.com/digitalamnesiawelcome/PASB-bench.git
 cd PASB-bench
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
