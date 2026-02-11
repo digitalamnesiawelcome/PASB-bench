@@ -1,62 +1,76 @@
 # 🧪 PASB-bench (Lite)
 
-**PASB (Protocol for Attractor State Benchmarking)** — протокол для выявления и измерения **устойчивых режимов (UR)** LLM.  
-Эта репа — **PASB-Lite (MVP)**: лёгкий запуск для API и локальных моделей.
+**PASB (Protocol for Attractor State Benchmarking)** is a specialized protocol designed to identify and measure **Stable Regimes (SR)** within Large Language Models.
 
-## 🚀 Возможности
-- Тесты:
-  - Persona Flip Test  
-  - Non-commutativity Test  
-  - Antilexical Paraphrase Test  
-- Метрики:
-  - `stability_score`  
-  - `variance`  
-  - (позже) `UR_detected`  
-- Поддержка:
-  - OpenAI API  
-  - Локальные модели HuggingFace  
+This repository contains **PASB-Lite (MVP)**: a lightweight implementation for quick benchmarking via APIs or local environments.
+
+## 🚀 Key Features
+
+* **Core Tests:**
+* **Persona Flip Test**: Evaluates identity consistency.
+* **Non-commutativity Test**: Measures sensitivity to prompt ordering.
+* **Antilexical Paraphrase Test**: Checks stability across semantic variations.
+
+
+* **Metrics:**
+* `stability_score`: Quantifies response convergence.
+* `variance`: Measures output stochasticity.
+* `SR_detected`: Automated detection of Stable Regimes (coming soon).
+
+
+* **Supported Backends:**
+* OpenAI API
+* HuggingFace Local Models
+
+
 
 ---
 
-## ⚙️ Установка
+## ⚙️ Installation
+
 ```bash
 git clone https://github.com/<yourname>/PASB-bench.git
 cd PASB-bench
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+
 ```
 
 ---
 
-## ▶️ Быстрый старт
-### Вариант A: OpenAI API
+## ▶️ Quick Start
+
+### Option A: OpenAI API
+
 ```bash
 python pasb_lite.py --mode api --model gpt-4o-mini --key $OPENAI_API_KEY
+
 ```
 
-### Вариант B: Локальная модель HuggingFace
+### Option B: Local HuggingFace Model
+
 ```bash
 python pasb_lite.py --mode local --model gpt2
+
 ```
 
 ---
 
-## 📊 Артефакты
-- CSV: `results/output.csv`  
-- PNG-график: `results/stability.png` (если установлен matplotlib)  
+## 📊 Artifacts & Outputs
+
+After a run, check the `results/` directory:
+
+* **CSV Data:** `results/output.csv` — Raw metrics and logs.
+* **Visuals:** `results/stability.png` — Stability distribution plots (requires matplotlib).
 
 ---
 
-## 🧭 Интерпретация
-- `stability_score` ∈ [0,1] — доля модального ответа (MVP).  
-- `variance` = 1 - stability.  
-- `UR_detected` — бинарный детектор (будет добавлен в будущих версиях).  
+## 🧭 Interpretation Guide
 
----
+* **`stability_score`**  — The ratio of the modal (most frequent) response.
+* **`variance`** — Calculated as .
+* **`SR_detected`** — A binary classifier for Stable Regimes (available in future updates).
 
-## 📌 Ссылки
-- Канал: https://t.me/layersapi
-- Twitter: https://x.com/escaflowneee
 
----
+**Would you like me to help draft a "Contribution" section or a more detailed technical description of the Persona Flip Test?**
